@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Siobhan Lee
+    </title>
+
+    <!-- Website Stylesheet -->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Tab Favicon -->
+    <link rel="icon" href="./media/imgs/globe-americas.svg">
+
+    <!-- Leaflet -->
+
+        <!-- Leaflet Stylesheet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <!-- Leaflet Map Container JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+
+<body>
+
+    <!-- Site Header -->
+    <div class="container my-4 shadow p-3 mb-5 bg-body-tertiary rounded card">
+        <h1>Siobhan Lee</h1>
+        <p class="lead">
+            Kentucky-Based GIS Analyst. Enjoys Python, Web, and Database Development.
+        </p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="container mt-5 shadow p-3 mb-5 bg-body-tertiary rounded sticky-top card">
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-bg-light">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link text-bg-light">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-bg-dark rounded active">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contactme.html" class="nav-link text-bg-light">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Photo & About Section -->
+    <div class="mb-3 container mt-5 shadow p-3 mb-5 bg-body-tertiary rounded card">
+        <div class="row g-0">
+
+            <!-- Professional Photo -->
+            <div class="col-md-4">
+                <img src="./media/imgs/proxy-image.jpg" class="img-fluid rounded card" alt="...">
+            </div>
+
+            <!-- Biography -->
+            <div class="col-md-8">
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        About
+                    </h5>
+
+                    <p class="card-text">
+                        I grew up in a rural village just outside the Louisville Metropolitan Area in Kentucky. Early on I found a love for the outdoors in the countryside and fields that surrounded my small community.
+                        Living too far to walk from my childhood friends I quickly found a love for computers. In college this upbringing evolved into my passion for geospatial data.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Current Area -->
+    <div class="container mt-5 shadow p-3 mb-5 bg-body-tertiary rounded card" id="map">
+        <script>
+            var map = L.map('map', {
+                    zoomControl: false,
+                    dragging: false,
+                }
+            ).setView([38.207332504, -85.222165778], 10);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 10,
+                minZoom: 10,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+        </script>
+    </div>
+
+    <!-- Movies / TV -->
+
+
+    <!-- Carl Sagan Quotes -->
+        <div class="container mt-5 shadow p-3 mb-5 bg-body-tertiary rounded card">
+            <div class="card-body">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p>Science is more than a body of knowledge. It is a way of thinking; a way of skeptically interrogating the universe with a fine understanding of human fallibility.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Carl Sagan
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+    <!-- Bootstrap JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
